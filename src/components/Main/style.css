@@ -1,0 +1,253 @@
+.container {
+    display: flex;
+    width: calc(100vw - 100px);
+    min-height: calc(100vh - 100px);
+    margin: 50px auto;
+    border: 5px solid #f7f7f7;
+    border-radius: 27px;
+    overflow: hidden;
+}
+
+.container p {
+    color: rgb(168 168 166);
+}
+
+.container .left {
+    padding: 10vh 0 10vh 8vw;
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-image {
+    max-width: 100%;
+    align-self: center;
+}
+
+.content{
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 400;
+    padding-right: 8vw;
+    margin-top: 30px;
+}
+
+.container .right {
+    width: 45%;
+    background-image: url(./img/background.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.sheep {
+    max-width: 80%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding-right: 8vw;
+}
+
+label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 11px 0;
+    color: rgb(148 150 149);
+    font-size: 18px;
+}
+
+input {
+    height: 50px;
+    width: 60%;
+    border: 1px solid #f7f7f7;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+}
+
+input::placeholder{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+}
+
+input#code::placeholder{
+    color: black;
+    font-weight: 700;
+    text-align: center;
+}
+
+input#email::placeholder{
+    padding-left: 50px;
+    color: lightgray;
+    font-weight: 300;
+}
+
+input#email{
+    background-image: url(./img/email-icon.jpg);
+    background-repeat: no-repeat;
+    background-position: 5% center;
+    padding-left: 20px;
+}
+
+.gdpr-text {
+    font-size: 12px;
+    margin-top: 25px;
+}
+
+.gdpr-text a{
+    color: #af7965;
+}
+
+button {
+    width: 179px;
+    height: 53px;
+    background: linear-gradient(90deg, rgba(218, 15, 1, 1) 0%, rgba(241, 57, 7, 1) 100%);
+    border: 0;
+    border-radius: 30px;
+    font-weight: 700;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: all .2s ease-in;
+}
+
+button:active,
+button:hover{
+    background: linear-gradient(90deg, rgba(241, 57, 7, 1) 0%, rgb(211 57 15) 100%);
+}
+
+.ReactModal__Content.ReactModal__Content--after-open{
+    max-width: 500px;
+    max-height: 400px;
+    margin: auto;
+    inset: 50px;
+    border: none !important;
+    border-radius: 40px !important;
+    color: rgb(112, 112, 112);
+    line-height: 28px;
+}
+.ReactModal__Overlay.ReactModal__Overlay--after-open{
+    background-color: rgb(169 169 169 / 75%) !important;
+}
+
+.button-wrapper{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+@media screen and (min-width: 1025px) {
+    .sheep-small{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .container {
+        width: calc(100vw - 60px);
+        margin: 30px auto;
+        min-height: calc(100vh - 60px);
+    }
+
+    .container .left{
+        width: 100%;
+        padding: 5vh 5vw;
+        position: relative;
+    }
+
+    .content{
+        max-width: 60%;
+    }
+    .sheep-wrapper{
+        position: relative;
+    }
+
+    .sheep-small {
+        display: block;
+        max-height: 400px;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+
+    .container .right {
+        display: none;
+    }
+
+    form{
+        max-width: 60%;
+    }
+}
+@media screen and (max-width: 800px) {
+    form{
+        max-width: 70%;
+    }
+
+    .content{
+        max-width: 70%;
+    }
+
+    .sheep-wrapper{
+        height: 100px;
+    }
+
+    .sheep-small{
+        max-height: 360px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .container {
+        width: calc(100vw - 30px);
+        margin: 15px auto;
+    }
+
+    form{
+        max-width: 100%;
+    }
+
+    .content{
+        max-width: 100%;
+    }
+
+    .sheep-wrapper{
+        height: 200px;
+    }
+
+    .sheep-small{
+        max-height: 250px;
+    }
+
+    .gdpr-text{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .container p{
+        font-size: 16px;
+    }
+    label{
+        flex-direction: column;
+        font-size: 16px;
+    }
+
+    input{
+        width: 100%;
+        margin-top: 10px;
+    }
+    .sheep-small{
+        max-height: 200px;
+    }
+
+    .container p.gdpr-text{
+        font-size: 14px;
+    }
+}
