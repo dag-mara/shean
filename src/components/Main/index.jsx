@@ -42,7 +42,7 @@ export const Main = () => {
         <div className="container">
             <div className="left">
                 <img className="header-image" src={headerImage} alt="Oslavte s námi narozeniny" role="banner"/>
-                <p className='content' role="main"><strong>Slavíme 15 let! </strong>Vyzveněte si od nás dárek, který vám vykouzlí úsměv na tváři. Po zadání e-mailu se vám ozveme a domluvíme se společně, jak váš dárek budete chtít využít.
+                <p className='content' role="main"><strong>Slavíme 15 let! </strong>Vyzvedněte si od nás dárek, který vám vykouzlí úsměv na tváři. Po zadání e-mailu se vám ozveme a domluvíme se společně, jak váš dárek budete chtít využít.
                 </p>
                 <form onSubmit={handleSubmit}>
                     <label htmlFor="">
