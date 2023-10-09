@@ -17,7 +17,6 @@ export const Main = () => {
 
     function closeModal() {
         setIsOpen(false);
-        setEmail('');
         document.querySelector('#email').style.backgroundImage = { emailIcon };
     }
 
